@@ -1,0 +1,78 @@
+{
+    "name": "zhil/cache-bundle-bug",
+    "license": "proprietary",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "AppBundle\\": "src/AppBundle"
+        },
+        "classmap": [
+            "app/AppKernel.php",
+            "app/AppCache.php"
+        ]
+    },
+    "autoload-dev": {
+        "files": [
+            "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
+        ]
+    },
+    "require": {
+        "php": ">=5.3.9",
+        "doctrine/doctrine-bundle": "~1.4",
+        "doctrine/orm": "^2.4.8",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "sensio/distribution-bundle": "~4.0",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "symfony/monolog-bundle": "^3.0.2",
+        "symfony/swiftmailer-bundle": "~2.3,>=2.3.10",
+        "symfony/symfony": "2.8.*",
+        "twig/twig": "^1.0||^2.0",
+        "cache/cache-bundle": "~0.5.0",
+        "cache/psr-6-doctrine-bridge": "^4.0@dev",
+        "cache/adapter-bundle": "~0.5.0",
+        "cache/apc-adapter": "~0.4.0",
+        "cache/memcached-adapter": "~0.4.0",
+        "cache/apcu-adapter": "~0.3.0"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "~3.0",
+        "symfony/phpunit-bridge": "~2.7",
+	"phpunit/phpunit": "4.8.*",
+        "guzzlehttp/guzzle": "4.*",
+        "hautelook/alice-bundle": "^2.0@beta",
+        "nelmio/alice": "^3.0@beta",
+        "theofidry/alice-data-fixtures": "^1.0@beta",
+        "doctrine/data-fixtures": "^1.2",
+        "trappar/alice-generator-bundle": "^1.1",
+        "liip/functional-test-bundle": "^1.7"
+    },
+    "scripts": {
+        "symfony-scripts": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "post-install-cmd": [
+            "@symfony-scripts"
+        ],
+        "post-update-cmd": [
+            "@symfony-scripts"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin",
+        "sort-packages": true
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": null
+    }
+}
