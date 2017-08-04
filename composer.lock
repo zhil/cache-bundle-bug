@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ecdf0c91a98d21066da3119881e628b",
+    "content-hash": "53d48f97040bdb210a8b0ac0695e7ccc",
     "packages": [
         {
             "name": "cache/adapter-bundle",
@@ -278,29 +278,30 @@
         },
         {
             "name": "cache/cache-bundle",
-            "version": "0.5.0",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-cache/cache-bundle.git",
-                "reference": "00549bb7fc39d0ffdb2f5b916e7ee0be0f4505ee"
+                "reference": "8850baa08565c384393c4c48f920e92d2ab135d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-cache/cache-bundle/zipball/00549bb7fc39d0ffdb2f5b916e7ee0be0f4505ee",
-                "reference": "00549bb7fc39d0ffdb2f5b916e7ee0be0f4505ee",
+                "url": "https://api.github.com/repos/php-cache/cache-bundle/zipball/8850baa08565c384393c4c48f920e92d2ab135d7",
+                "reference": "8850baa08565c384393c4c48f920e92d2ab135d7",
                 "shasum": ""
             },
             "require": {
-                "cache/session-handler": "^0.2",
-                "cache/taggable-cache": "^0.5",
+                "cache/session-handler": "^1.0",
+                "cache/taggable-cache": "^1.0",
+                "nyholm/nsa": "^1.1",
                 "php": "^5.6 || ^7.0",
                 "symfony/framework-bundle": "^2.7 || ^3.0"
             },
             "require-dev": {
-                "cache/array-adapter": "^0.5",
+                "cache/array-adapter": "^1.0",
                 "cache/psr-6-doctrine-bridge": "^3.0",
                 "matthiasnoback/symfony-dependency-injection-test": "^1.0",
-                "nyholm/symfony-bundle-test": "^1.0.1",
+                "nyholm/symfony-bundle-test": "^1.2",
                 "phpunit/phpunit": "^5.7.17",
                 "symfony/symfony": "^2.7 || ^3.0"
             },
@@ -339,7 +340,7 @@
                 "router",
                 "session"
             ],
-            "time": "2017-03-29T09:23:55+00:00"
+            "time": "2017-08-02T16:39:24+00:00"
         },
         {
             "name": "cache/hierarchical-cache",
@@ -590,16 +591,16 @@
         },
         {
             "name": "cache/session-handler",
-            "version": "0.2.1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-cache/session-handler.git",
-                "reference": "f4c2b896437f6d97e434b35f61b861bb1bbde5d4"
+                "reference": "315d9cd0a7a4235e8891e0b4ea63b21e5348277f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-cache/session-handler/zipball/f4c2b896437f6d97e434b35f61b861bb1bbde5d4",
-                "reference": "f4c2b896437f6d97e434b35f61b861bb1bbde5d4",
+                "url": "https://api.github.com/repos/php-cache/session-handler/zipball/315d9cd0a7a4235e8891e0b4ea63b21e5348277f",
+                "reference": "315d9cd0a7a4235e8891e0b4ea63b21e5348277f",
                 "shasum": ""
             },
             "require": {
@@ -607,14 +608,13 @@
                 "psr/cache": "^1.0"
             },
             "require-dev": {
-                "cache/array-adapter": "^0.5",
-                "mockery/mockery": "^0.9",
-                "phpunit/phpunit": "^4.0 || ^5.1"
+                "cache/array-adapter": "^1.0",
+                "phpunit/phpunit": "^5.7.21"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.3-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
@@ -648,7 +648,7 @@
                 "psr-6",
                 "session handler"
             ],
-            "time": "2017-03-13T10:43:18+00:00"
+            "time": "2017-07-16T21:58:17+00:00"
         },
         {
             "name": "cache/tag-interop",
@@ -707,36 +707,32 @@
         },
         {
             "name": "cache/taggable-cache",
-            "version": "0.5.1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-cache/taggable-cache.git",
-                "reference": "1881182cd9f4869cac01265e3195deba8206345c"
+                "reference": "944559346915487931abdbb3a1392b1d58474da2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-cache/taggable-cache/zipball/1881182cd9f4869cac01265e3195deba8206345c",
-                "reference": "1881182cd9f4869cac01265e3195deba8206345c",
+                "url": "https://api.github.com/repos/php-cache/taggable-cache/zipball/944559346915487931abdbb3a1392b1d58474da2",
+                "reference": "944559346915487931abdbb3a1392b1d58474da2",
                 "shasum": ""
             },
             "require": {
-                "cache/adapter-common": "^0.4",
                 "cache/tag-interop": "^1.0",
                 "php": "^5.6 || ^7.0",
                 "psr/cache": "^1.0"
             },
-            "conflict": {
-                "cache/adapter-common": "<0.4"
-            },
             "require-dev": {
                 "cache/integration-tests": "^0.16",
-                "phpunit/phpunit": "^4.0 || ^5.1",
+                "phpunit/phpunit": "^5.7.21",
                 "symfony/cache": "^3.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.6-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
@@ -776,7 +772,7 @@
                 "psr6",
                 "tag"
             ],
-            "time": "2017-03-28T17:20:31+00:00"
+            "time": "2017-07-16T22:21:23+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1767,6 +1763,53 @@
                 "psr-3"
             ],
             "time": "2017-06-19T01:22:40+00:00"
+        },
+        {
+            "name": "nyholm/nsa",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nyholm/NSA.git",
+                "reference": "213a70dee2dd04433d31a187e24e92c8b59d1655"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nyholm/NSA/zipball/213a70dee2dd04433d31a187e24e92c8b59d1655",
+                "reference": "213a70dee2dd04433d31a187e24e92c8b59d1655",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3 || ^7.0",
+                "webmozart/assert": "^1.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nyholm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com"
+                }
+            ],
+            "description": "See everything and do whatever you want. No privacy rule will stop us. Used in tests, debugging and fixtures to access properties and methods.",
+            "homepage": "http://tnyholm.se",
+            "keywords": [
+                "Fixture",
+                "debug",
+                "reflection",
+                "test"
+            ],
+            "time": "2017-04-13T17:21:01+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2818,16 +2861,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.25",
+            "version": "v2.8.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "c2452af5659d0492a43268c389bb211295c5e4c9"
+                "reference": "33553101754e0888a1a1fecc46d7a7f10f6f9580"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/c2452af5659d0492a43268c389bb211295c5e4c9",
-                "reference": "c2452af5659d0492a43268c389bb211295c5e4c9",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/33553101754e0888a1a1fecc46d7a7f10f6f9580",
+                "reference": "33553101754e0888a1a1fecc46d7a7f10f6f9580",
                 "shasum": ""
             },
             "require": {
@@ -2952,7 +2995,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-07-17T18:00:19+00:00"
+            "time": "2017-08-01T09:05:29+00:00"
         },
         {
             "name": "twig/twig",
@@ -3019,6 +3062,56 @@
                 "templating"
             ],
             "time": "2017-06-07T18:47:58+00:00"
+        },
+        {
+            "name": "webmozart/assert",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/assert.git",
+                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/2db61e59ff05fe5126d152bd0655c9ea113e550f",
+                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\Assert\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Assertions to validate method input/output with nice error messages.",
+            "keywords": [
+                "assert",
+                "check",
+                "validate"
+            ],
+            "time": "2016-11-23T20:04:58+00:00"
         }
     ],
     "packages-dev": [
@@ -4575,7 +4668,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v2.8.25",
+            "version": "v2.8.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
@@ -4811,56 +4904,6 @@
                 "test"
             ],
             "time": "2016-11-09T04:05:49+00:00"
-        },
-        {
-            "name": "webmozart/assert",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
-                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/2db61e59ff05fe5126d152bd0655c9ea113e550f",
-                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.3 || ^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.6",
-                "sebastian/version": "^1.0.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Webmozart\\Assert\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "Assertions to validate method input/output with nice error messages.",
-            "keywords": [
-                "assert",
-                "check",
-                "validate"
-            ],
-            "time": "2016-11-23T20:04:58+00:00"
         }
     ],
     "aliases": [],
